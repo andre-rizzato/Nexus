@@ -4427,25 +4427,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\André Rizzato\\.nuget\\packages\\": {},
+    "C:\\Users\\work\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RizzatoSistemasRepos\\Nexus Complete Market\\nexus\\nexus.csproj",
+      "projectUniqueName": "D:\\RizzatoSistemasRepos\\Nexus\\Nexus Complete Market\\nexus\\nexus.csproj",
       "projectName": "nexus",
-      "projectPath": "D:\\RizzatoSistemasRepos\\Nexus Complete Market\\nexus\\nexus.csproj",
-      "packagesPath": "C:\\Users\\André Rizzato\\.nuget\\packages\\",
-      "outputPath": "D:\\RizzatoSistemasRepos\\Nexus Complete Market\\nexus\\obj\\",
+      "projectPath": "D:\\RizzatoSistemasRepos\\Nexus\\Nexus Complete Market\\nexus\\nexus.csproj",
+      "packagesPath": "C:\\Users\\work\\.nuget\\packages\\",
+      "outputPath": "D:\\RizzatoSistemasRepos\\Nexus\\Nexus Complete Market\\nexus\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\André Rizzato\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\work\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4455,8 +4455,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://rgcore-nuget.azurewebsites.net/nuget/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
@@ -4512,7 +4511,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23463.5/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
