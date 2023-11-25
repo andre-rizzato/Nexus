@@ -65,20 +65,75 @@ namespace nexus.Controllers
                 }
 
                 // Update user properties based on the requestDto
-                user.Username = requestDto.Username;
-                user.Email = requestDto.Email;
-                user.IsEmployee = requestDto.IsEmployee;
-                user.FullName = requestDto.FullName;
-                user.Address = requestDto.Address;
-                user.RegistrationDate = requestDto.RegistrationDate;
-                user.PhoneNumber = requestDto.PhoneNumber;
-                user.DateOfBirth = requestDto.DateOfBirth;
-                user.PaymentCardNumber = requestDto.PaymentCardNumber;
-                user.PaymentCardExpiry = requestDto.PaymentCardExpiry;
-                user.PaymentCardCVV = requestDto.PaymentCardCVV;
-                user.PreferredLanguage = requestDto.PreferredLanguage;
-                user.ThemePreference = requestDto.ThemePreference;
-                user.ReceivePromotionalEmails = requestDto.ReceivePromotionalEmails;
+                if (!string.IsNullOrEmpty(requestDto.Username))
+                {
+                    user.Username = requestDto.Username;
+                }
+
+                if (!string.IsNullOrEmpty(requestDto.Email))
+                {
+                    user.Email = requestDto.Email;
+                }
+
+                if (requestDto.IsEmployee != default)
+                {
+                    user.IsEmployee = requestDto.IsEmployee;
+                }
+
+                if (!string.IsNullOrEmpty(requestDto.FullName))
+                {
+                    user.FullName = requestDto.FullName;
+                }
+
+                if (!string.IsNullOrEmpty(requestDto.Address))
+                {
+                    user.Address = requestDto.Address;
+                }
+
+                if (requestDto.RegistrationDate != default)
+                {
+                    user.RegistrationDate = requestDto.RegistrationDate;
+                }
+
+                if (!string.IsNullOrEmpty(requestDto.PhoneNumber))
+                {
+                    user.PhoneNumber = requestDto.PhoneNumber;
+                }
+
+                if (requestDto.DateOfBirth != default)
+                {
+                    user.DateOfBirth = requestDto.DateOfBirth;
+                }
+
+                if (!string.IsNullOrEmpty(requestDto.PaymentCardNumber))
+                {
+                    user.PaymentCardNumber = requestDto.PaymentCardNumber;
+                }
+
+                if (!string.IsNullOrEmpty(requestDto.PaymentCardExpiry.ToString()))
+                {
+                    user.PaymentCardExpiry = requestDto.PaymentCardExpiry;
+                }
+
+                if (!string.IsNullOrEmpty(requestDto.PaymentCardCVV))
+                {
+                    user.PaymentCardCVV = requestDto.PaymentCardCVV;
+                }
+
+                if (!string.IsNullOrEmpty(requestDto.PreferredLanguage))
+                {
+                    user.PreferredLanguage = requestDto.PreferredLanguage;
+                }
+
+                if (!string.IsNullOrEmpty(requestDto.ThemePreference))
+                {
+                    user.ThemePreference = requestDto.ThemePreference;
+                }
+
+                if (requestDto.ReceivePromotionalEmails != default)
+                {
+                    user.ReceivePromotionalEmails = requestDto.ReceivePromotionalEmails;
+                }
 
                 _userRepository.Update(user);
 
@@ -86,30 +141,7 @@ namespace nexus.Controllers
             }
             catch (System.Exception)
             {
-
                 throw;
             }
         }
-
-        // DELETE api/user/5
-        [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
-        {
-            var user = _userRepository.GetById(id);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            _userRepository.Delete(user);
-
-            return Ok($"User deleted successfully! user id: {id}");
-        }
-    }
-
-
-}
-
-
 
