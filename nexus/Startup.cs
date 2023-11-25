@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using nexus.Data;
+using nexus.Repositories.Concretes;
+using nexus.Repositories.Interfaces;
 
 public class Startup
 {
@@ -21,6 +23,8 @@ public class Startup
         services.AddDbContext<NexusUsersDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("LocalDBConnection"))); // Change to azure connection string when deploying to azure
 
+        services.AddScoped<IUserRepository, UserRepository>();
+ 
         services.AddControllers();
 
         services.AddSwaggerGen(c =>
