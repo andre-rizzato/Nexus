@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/a93edfa0-60b9-4ecd-bb5f-6018c20166d5/resourceGroups/Nexus/providers/Microsoft.Web/sites/nexus-user-manager",
+    "appService.deploySubpath": "nexus"
+}
