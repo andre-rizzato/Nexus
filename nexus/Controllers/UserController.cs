@@ -144,6 +144,23 @@ namespace nexus.Controllers
                 throw;
             }
         }
-    }
 
+          // DELETE api/user/5
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            var user = _userRepository.GetById(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            _userRepository.Delete(user);
+
+            return Ok($"User deleted successfully! user id: {id}");
+        }
+ 
+    }
 }
+
